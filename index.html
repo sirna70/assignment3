@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="15">
+  <title>Water and Wind Status</title>
+  <style>
+      body{
+          background-image:url(asset/img/webwallp.jpg);
+          background-size:cover;
+          background-attachment: fixed;
+      }
+      p{
+          color:blueviolet;
+      }
+  </style>
+  <link type="text/css" href="asset/style.css" rel="stylesheet">
+
+</head>
+<style>
+  .container4 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) 
+  }
+</style>
+
+<body>
+  <div class="row container4">
+    <h1 style="color: rgba(214, 37, 14, 0.507); text-align: center"><marquee width="750" scrollamount="700" scrolldelay="600">Water and Wind Status Transform</marquee></h1> 
+      <div class=" col-sm-6 col-xl-6 mb-6">
+          <div class="card border-0 shadow">
+              <div class="card-body">
+                  <div class="row d-block d-xl-flex align-items-center">
+                      <div class=" col-xl-4 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                        <div class="icon-shape icon-shape-secondary rounded me-4 me-sm-0">
+                          <img src="asset/img/waterdragon.png" style="width:80%;height:80%;">
+
+                        </div>
+                      </div>
+                      <div class=" col-xl-7 px-xl-0">
+                          <div class="d-none d-sm-block">
+                              <h2 class="h6 text-gray-400 mb-0">Water Status</h2>
+                              <h3 class="fw-extrabold mb-2">Status : {{.waterStat}}</h3>
+                          </div>
+                          <small class="d-flex align-items-center text-gray-500">
+                            Tinggi : {{.waterValue}} meter 
+                          </small> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class=" col-sm-6 col-xl-6 mb-6">
+          <div class="card border-0 shadow">
+              <div class="card-body">
+                  <div class="row d-block d-xl-flex align-items-center">
+                      <div class=" col-xl-4 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                          <div class="icon-shape icon-shape-secondary rounded me-4 me-sm-0">
+                            <img src="asset/img/winddragon.png" style="width:80%;height:80%;">
+
+                          </div>
+                      </div>
+                      <div class=" col-xl-7 px-xl-0">
+                          <div class="d-none d-sm-block">
+                              <h2 class="h6 text-gray-400 mb-0">Wind Status</h2>
+                              <h3 class="fw-extrabold mb-2">Status : {{.windStat}}</h3>
+                          </div>
+                          <small class="d-flex align-items-center text-gray-500">
+                            Kecepatan : {{.windValue}} meter/detik
+                          </small> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
